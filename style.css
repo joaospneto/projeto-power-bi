@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e legível */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.dashboard-container {
+    width: 90%; /* Largura do contêiner */
+    margin: 20px auto; /* Centraliza o contêiner */
+    position: relative; /* Permite posicionar o iframe dentro do contêiner */
+  }
+  
+  .dashboard-iframe {
+    width: 100%; 
+    height: 600px; /* Altura fixa do iframe */
+    display: block;
+    border: none; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+.projeto {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para posicionar o número do projeto */
+}
+
+.projeto h2 {
+    color: #222;
+    margin-top: 0;
+}
+
+.projeto img, .projeto iframe {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projeto p {
+    line-height: 1.6;
+}
+
+.projeto a {
+    color: #f26522;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto a:hover {
+    color: #e65100;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}   
