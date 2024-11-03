@@ -36,8 +36,8 @@ Sistema de controle financeiro pessoal, apresentando:
 
 ## 📫 Contato
 - Email: joaonetocd@gmail.com
-- LinkedIn: [Seu LinkedIn]
-- GitHub: [Seu GitHub]
+- LinkedIn: https://www.linkedin.com/in/joaoneto-py/
+
 
 ## 🔄 Atualizações
 O portfólio está em constante evolução, com novos projetos e melhorias sendo adicionados regularmente.
