@@ -1,12 +1,26 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #22223b;
+    margin: 0;
+    padding: 0;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 10px;
 }
 
 .social-links a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    transition: all 0.3s ease;
-    margin: 0 15px;
+    transition: transform 0.2s, color 0.2s;
+    font-size: 1.7rem;
+    display: inline-flex;
+    align-items: center;
 }
 
 .social-links a:hover {
@@ -16,36 +30,89 @@ body {
 .social-links .fa-linkedin:hover {
     color: #0077B5;
 }
-
 .social-links .fa-github:hover {
     color: #6e5494;
 }
-
 .social-links .fa-instagram:hover {
     color: #E4405F;
 }
 
+/* Card */
 .card {
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    border: none;
 }
-
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
+/* Skills Badges */
 .skills .badge {
-    margin-right: 5px;
-    font-size: 0.9em;
+    margin-right: 7px;
+    margin-bottom: 4px;
+    font-size: 0.95em;
+    padding: 0.5em 1em;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
 }
 
+/* Dashboard Container */
 .dashboard-container {
     position: relative;
     overflow: hidden;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
+    background: #e9ecef;
+    margin-bottom: 1em;
+    min-height: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+/* Footer */
+footer {
+    background: #22223b;
+    color: #fff;
+    padding: 24px 0 10px 0;
+}
+footer a {
+    color: #fff;
+    transition: color 0.2s;
+}
 footer a:hover {
     color: #0d6efd !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 24px;
+    }
+    .dashboard-container {
+        min-height: 140px;
+    }
+    .social-links {
+        gap: 12px;
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 576px) {
+    .dashboard-container {
+        min-height: 90px;
+    }
+    .skills .badge {
+        font-size: 0.85em;
+        padding: 0.4em 0.8em;
+    }
+}
+@media (max-width: 400px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-links a {
+        font-size: 1.5rem;
+    }
 }
