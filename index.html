@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Power BI</title>
+    <title>João Neto | Portfólio Power BI</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            transition: transform 0.2s, color 0.2s;
+        }
+        .social-links a:hover {
+            color: #0dcaf0;
+            transform: scale(1.15);
+        }
+        .card {
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+        }
+        .skills .badge {
+            margin-right: 6px;
+            margin-bottom: 4px;
+            font-size: 1em;
+        }
+        /* Responsividade dos iframes */
+        .dashboard-container {
+            min-height: 250px;
+        }
+        @media (max-width: 576px) {
+            .display-4 { font-size: 2rem; }
+            .dashboard-container { min-height: 180px; }
+            .card-header h2 { font-size: 1.2rem; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Navegação principal">
         <div class="container">
             <a class="navbar-brand" href="#">João Neto</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,17 +64,17 @@
     <!-- Header -->
     <header class="bg-dark text-white text-center py-5 mt-5">
         <div class="container">
-            <h1 class="display-4">Meu Portfólio Power BI</h1>
-            <p class="lead">Olá! Sou João Neto, apaixonado por análise de dados e visualização com Power BI. Aqui você encontra alguns dos meus projetos.</p>
+            <h1 class="display-4">Portfólio Power BI</h1>
+            <p class="lead mb-4">Olá! Sou João Neto, apaixonado por análise de dados e visualização com Power BI. Aqui você encontra alguns dos meus projetos.</p>
             <!-- Redes Sociais -->
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/joaoneto-py/" target="_blank">
+            <div class="social-links mb-2">
+                <a href="https://www.linkedin.com/in/joaoneto-py/" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
-                <a href="https://github.com/joaospneto" target="_blank">
+                <a href="https://github.com/joaospneto" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a href="https://www.instagram.com/_joao_neto/" target="_blank">
+                <a href="https://www.instagram.com/_joao_neto/" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram fa-2x"></i>
                 </a>
             </div>
@@ -49,69 +82,93 @@
     </header>
 
     <main class="container mt-5">
-        <!-- Projetos -->
-        <section id="projetos">
-            <!-- Motim Food -->
-            <div class="card mb-5">
-                <div class="card-header bg-dark text-white">
-                    <h2>Projeto Motim Food</h2>
-                </div>
-                <div class="card-body">
-                    <div class="dashboard-container ratio ratio-16x9">
-                        <iframe title="Master em Power BI - Motim Food" 
-                                src="https://app.powerbi.com/view?r=eyJrIjoiZDllMGEyNmMtYmRkYi00Y2MwLTgxOTUtMmEyMGFlNmE0MjQ4IiwidCI6ImEzNTAxNmJlLTc2ODEtNDBlYi05ZjFmLWI1NzExZjI0YzgwYiJ9" 
-                                frameborder="0" 
-                                allowFullScreen="true">
-                        </iframe>
-                    </div>
-                    <p class="mt-4">No projeto Motim Food, mergulhei no universo da análise de dados do setor alimentício para criar dashboards interativos e dinâmicos no Power BI. Através da análise de vendas, estoque e performance de produtos, identifiquei insights valiosos que auxiliaram na tomada de decisões estratégicas da empresa.</p>
-                    <div class="skills mt-3">
-                        <span class="badge bg-primary">Power BI</span>
-                        <span class="badge bg-secondary">DAX</span>
-                        <span class="badge bg-success">Power Query</span>
-                    </div>
+        <!-- Sobre -->
+        <section id="sobre" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2>Sobre mim</h2>
+                    <p>Sou analista de dados com experiência em Power BI, DAX, Power Query e análise financeira. Gosto de transformar dados em insights e criar painéis interativos que ajudam empresas e pessoas a tomarem melhores decisões.</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Gastos Pessoais -->
-            <div class="card mb-5">
-                <div class="card-header bg-dark text-white">
-                    <h2>Projeto Gastos Pessoais</h2>
+        <!-- Projetos -->
+        <section id="projetos" class="mb-5">
+            <h2 class="text-center mb-4">Projetos em Destaque</h2>
+            <div class="row g-4">
+                <!-- Motim Food -->
+                <div class="col-md-6">
+                    <article class="card h-100">
+                        <div class="card-header bg-dark text-white">
+                            <h3 class="h5 mb-0">Projeto Motim Food</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="dashboard-container ratio ratio-16x9 mb-3">
+                                <iframe title="Master em Power BI - Motim Food" 
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiZDllMGEyNmMtYmRkYi00Y2MwLTgxOTUtMmEyMGFlNmE0MjQ4IiwidCI6ImEzNTAxNmJlLTc2ODEtNDBlYi05ZjFmLWI1NzExZjI0YzgwYiJ9" 
+                                    frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p>No projeto Motim Food, mergulhei no universo da análise de dados do setor alimentício para criar dashboards interativos e dinâmicos no Power BI. Através da análise de vendas, estoque e performance de produtos, identifiquei insights valiosos que auxiliaram na tomada de decisões estratégicas da empresa.</p>
+                            <div class="skills mt-3">
+                                <span class="badge bg-primary">Power BI</span>
+                                <span class="badge bg-secondary">DAX</span>
+                                <span class="badge bg-success">Power Query</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="card-body">
-                    <div class="dashboard-container ratio ratio-16x9">
-                        <iframe title="Master em Power BI - Gastos Pessoais" 
-                                src="https://app.powerbi.com/view?r=eyJrIjoiNzU4OWQzMzktNmExOC00YzhlLWFmMDQtOGNiMTM0NzI5MDRmIiwidCI6ImEzNTAxNmJlLTc2ODEtNDBlYi05ZjFmLWI1NzExZjI0YzgwYiJ9" 
-                                frameborder="0" 
-                                allowFullScreen="true">
-                        </iframe>
-                    </div>
-                    <p class="mt-4">No projeto "Gastos Pessoais", explorei o poder do Power BI para gerenciar minhas finanças de forma eficiente. Criei dashboards interativos que me permitem visualizar meus gastos mensais, identificar áreas onde posso economizar e controlar meu orçamento de forma precisa.</p>
-                    <div class="skills mt-3">
-                        <span class="badge bg-primary">Power BI</span>
-                        <span class="badge bg-info">Análise Financeira</span>
-                    </div>
+                <!-- Gastos Pessoais -->
+                <div class="col-md-6">
+                    <article class="card h-100">
+                        <div class="card-header bg-dark text-white">
+                            <h3 class="h5 mb-0">Projeto Gastos Pessoais</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="dashboard-container ratio ratio-16x9 mb-3">
+                                <iframe title="Master em Power BI - Gastos Pessoais" 
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiNzU4OWQzMzktNmExOC00YzhlLWFmMDQtOGNiMTM0NzI5MDRmIiwidCI6ImEzNTAxNmJlLTc2ODEtNDBlYi05ZjFmLWI1NzExZjI0YzgwYiJ9" 
+                                    frameborder="0" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p>No projeto "Gastos Pessoais", explorei o poder do Power BI para gerenciar minhas finanças de forma eficiente. Criei dashboards interativos que me permitem visualizar meus gastos mensais, identificar áreas onde posso economizar e controlar meu orçamento de forma precisa.</p>
+                            <div class="skills mt-3">
+                                <span class="badge bg-primary">Power BI</span>
+                                <span class="badge bg-info">Análise Financeira</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2>Contato</h2>
+                    <p><i class="far fa-envelope"></i> <a href="mailto:joaonetocd@gmail.com">joaonetocd@gmail.com</a></p>
+                    <p>Fique à vontade para me chamar nas redes sociais ou enviar um e-mail!</p>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <div class="mb-3">
-                <a href="https://www.linkedin.com/in/joaoneto-py/" class="text-white mx-2">
+            <div class="mb-3 social-links">
+                <a href="https://www.linkedin.com/in/joaoneto-py/" class="text-white mx-2" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/joaospneto" class="text-white mx-2">
+                <a href="https://github.com/joaospneto" class="text-white mx-2" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.instagram.com/_joao_neto/" class="text-white mx-2">
+                <a href="https://www.instagram.com/_joao_neto/" class="text-white mx-2" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
-            <p><i class="far fa-envelope"></i> joaonetocd@gmail.com</p>
-            <p class="mb-0">&copy; 2024 João Neto - Todos os direitos reservados</p>
+            <p class="mb-0">&copy; 2025 João Neto - Todos os direitos reservados</p>
         </div>
     </footer>
 
